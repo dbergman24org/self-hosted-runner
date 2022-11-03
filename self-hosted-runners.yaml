@@ -5,7 +5,7 @@ metadata:
 spec:
   template:
     spec:
-      repository: dbergman24/self-hosted-runner
+      repository: dbergman24org/self-hosted-runner
 ---
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: HorizontalRunnerAutoscaler
@@ -15,8 +15,8 @@ spec:
   scaleTargetRef:
     name: runner-deployment
   minReplicas: 1
-  maxReplicas: 5
+  maxReplicas: 2
   metrics:
   - type: TotalNumberOfQueuedAndInProgressWorkflowRuns
     repositoryNames:
-    - dbergman24/self-hosted-runner
+    - dbergman24org/self-hosted-runner
